@@ -1,59 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
-  <title id="title">Glyph Mini Apps showcase</title>
-  <desc id="desc">Six monochrome cards showing Snake, Garden, Shooter, Reaction, Notify Glyph, and Now Playing on a circular 13 by 13 Glyph Matrix.</desc>
+  <title id="title">Glyph Mini Apps actual-renderer showcase</title>
+  <desc id="desc">Representative 13 by 13 frames based on the project renderers for Snake, Garden, Shooter, Reaction, Notify Glyph, and Now Playing.</desc>
   <defs>
     <pattern id="page-dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#d8d8d5"/></pattern>
     <pattern id="matrix-dots" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="5.5" cy="5.5" r="1.35" fill="#252525"/></pattern>
+    <clipPath id="matrix-clip"><circle cx="71.5" cy="71.5" r="82"/></clipPath>
+    <pattern id="lit-cells" width="11" height="11" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="8" height="8" fill="#fff"/></pattern>
+    <mask id="led-mask"><rect width="143" height="143" fill="url(#lit-cells)"/></mask>
     <symbol id="card-shell" viewBox="0 0 360 320">
       <rect width="360" height="320" rx="18" fill="#e5e5e2"/>
       <path d="M0 72h165c38 0 69 31 69 69v179M360 54H260v266M0 256h84c24 0 44 20 44 44v20M322 0v118c0 22 18 40 38 40" fill="none" stroke="#c8c8c4" stroke-width="1.5"/>
-      <circle cx="49" cy="118" r="14" fill="none" stroke="#c8c8c4" stroke-width="1.5"/>
-      <circle cx="49" cy="158" r="10" fill="none" stroke="#c8c8c4" stroke-width="1.5"/>
-      <circle cx="180" cy="176" r="82" fill="#050505"/>
-      <circle cx="180" cy="176" r="68" fill="url(#matrix-dots)"/>
+      <circle cx="49" cy="118" r="14" fill="none" stroke="#c8c8c4" stroke-width="1.5"/><circle cx="49" cy="158" r="10" fill="none" stroke="#c8c8c4" stroke-width="1.5"/>
+      <circle cx="180" cy="176" r="82" fill="#050505"/><circle cx="180" cy="176" r="71.5" fill="url(#matrix-dots)"/>
     </symbol>
     <style>
-      .name{font:700 16px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.6px;fill:#171717}
-      .meta{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.8px;fill:#696965}
-      .px{fill:#fff}.dim{fill:#999}.red{fill:#d71920}
+      .name{font:700 16px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.6px;fill:#171717}.meta{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.8px;fill:#696965}
+      .px{fill:#fff}.mid{fill:#969696}.low{fill:#595959}g[clip-path]{mask:url(#led-mask)}
     </style>
   </defs>
-  <rect width="1200" height="780" fill="#f4f4f1"/>
-  <rect width="1200" height="780" fill="url(#page-dots)" opacity=".55"/>
-  <text x="45" y="48" class="name" font-size="20">GLYPH MINI APPS</text>
-  <text x="45" y="72" class="meta">SIX TINY EXPERIENCES FOR THE NOTHING PHONE (4A) PRO</text>
+  <rect width="1200" height="780" fill="#f4f4f1"/><rect width="1200" height="780" fill="url(#page-dots)" opacity=".55"/>
+  <text x="45" y="48" class="name" font-size="20">GLYPH MINI APPS</text><text x="45" y="72" class="meta">REPRESENTATIVE FRAMES FROM THE ACTUAL 13×13 RENDERERS</text>
 
-  <!-- Snake -->
-  <g transform="translate(45 100)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">SNAKE</text><text x="18" y="51" class="meta">SELF-PLAYING</text>
-    <g transform="translate(119 115)">
-      <rect class="px" x="22" y="22" width="9" height="9"/><rect class="px" x="33" y="22" width="9" height="9"/><rect class="px" x="44" y="22" width="9" height="9"/><rect class="px" x="44" y="33" width="9" height="9"/><rect class="px" x="44" y="44" width="9" height="9"/><rect class="px" x="55" y="44" width="9" height="9"/><rect class="px" x="66" y="44" width="9" height="9"/><rect class="px" x="77" y="44" width="9" height="9"/><rect class="px" x="77" y="55" width="9" height="9"/><rect class="px" x="77" y="66" width="9" height="9"/><rect class="px" x="88" y="66" width="9" height="9"/><rect class="red" x="99" y="88" width="9" height="9"/>
-    </g></g>
-
-  <!-- Garden -->
-  <g transform="translate(420 100)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">GARDEN</text><text x="18" y="51" class="meta">AMBIENT FLOWER</text>
-    <g transform="translate(119 115)">
-      <rect class="px" x="55" y="11" width="9" height="9"/><rect class="px" x="44" y="22" width="9" height="9"/><rect class="px" x="55" y="22" width="9" height="9"/><rect class="px" x="66" y="22" width="9" height="9"/><rect class="px" x="33" y="33" width="9" height="9"/><rect class="px" x="44" y="33" width="9" height="9"/><rect class="px" x="55" y="33" width="9" height="9"/><rect class="px" x="66" y="33" width="9" height="9"/><rect class="px" x="77" y="33" width="9" height="9"/><rect class="px" x="44" y="44" width="9" height="9"/><rect class="px" x="55" y="44" width="9" height="9"/><rect class="px" x="66" y="44" width="9" height="9"/><rect class="px" x="55" y="55" width="9" height="9"/><rect class="dim" x="55" y="66" width="9" height="9"/><rect class="dim" x="55" y="77" width="9" height="9"/><rect class="dim" x="44" y="77" width="9" height="9"/><rect class="dim" x="66" y="88" width="9" height="9"/><rect class="dim" x="55" y="99" width="9" height="9"/><rect class="dim" x="44" y="110" width="9" height="9"/>
-    </g></g>
-
-  <!-- Shooter -->
-  <g transform="translate(795 100)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">SHOOTER</text><text x="18" y="51" class="meta">ESSENTIAL KEY</text>
-    <g transform="translate(119 115)">
-      <g class="px"><rect x="11" y="22" width="9" height="9"/><rect x="22" y="11" width="9" height="9"/><rect x="33" y="22" width="9" height="9"/><rect x="11" y="33" width="31" height="9"/><rect x="66" y="22" width="9" height="9"/><rect x="77" y="11" width="9" height="9"/><rect x="88" y="22" width="9" height="9"/><rect x="66" y="33" width="31" height="9"/><rect x="55" y="66" width="9" height="9"/><rect x="55" y="88" width="9" height="9"/><rect x="44" y="110" width="31" height="9"/><rect x="55" y="99" width="9" height="9"/></g>
-    </g></g>
-
-  <!-- Reaction -->
-  <g transform="translate(45 435)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">REACTION</text><text x="18" y="51" class="meta">TEST YOUR SPEED</text>
-    <g transform="translate(119 115)" class="px"><path d="M55 5h20L62 45h22L38 118l12-52H28z"/></g>
+  <!-- SnakeGame + MatrixRenderer: full-brightness body and food. -->
+  <g transform="translate(45 100)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">SNAKE</text><text x="18" y="51" class="meta">BODY + FOOD · 255</text>
+    <g transform="translate(108.5 104.5)" class="px" clip-path="url(#matrix-clip)"><path d="M100 23h8v8h-8zM45 67h52v8H45zM89 78h8v19h-8z"/></g>
   </g>
 
-  <!-- Notify Glyph -->
-  <g transform="translate(420 435)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">NOTIFY GLYPH</text><text x="18" y="51" class="meta">APP ICON ALERTS</text>
-    <g transform="translate(119 115)" class="px"><rect x="44" y="22" width="31" height="9"/><rect x="33" y="33" width="53" height="9"/><rect x="33" y="44" width="53" height="42"/><rect x="22" y="77" width="75" height="9"/><rect x="44" y="88" width="31" height="9"/><rect x="55" y="99" width="9" height="9"/></g>
-    <circle cx="257" cy="106" r="8" class="red"/>
+  <!-- Default detailed tulip at rest: petals 255/150, stem 90, ground 40. -->
+  <g transform="translate(420 100)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">GARDEN</text><text x="18" y="51" class="meta">DETAILED TULIP · 4 LEVELS</text>
+    <g transform="translate(108.5 104.5)" clip-path="url(#matrix-clip)"><path class="px" d="M56 45h8v8h-8zM78 45h8v8h-8zM45 56h8v19h-8zM89 56h8v19h-8z"/><path class="mid" d="M67 45h8v8h-8zM56 56h30v8H56zM56 67h30v8H56zM56 78h30v8H56z"/><path class="low" d="M67 89h8v41h-8zM1 133h8v8H1zM23 133h8v8h-8zM45 133h8v8h-8zM67 133h8v8h-8zM89 133h8v8h-8zM111 133h8v8h-8zM133 133h8v8h-8z"/></g>
   </g>
 
-  <!-- Now Playing -->
-  <g transform="translate(795 435)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">NOW PLAYING</text><text x="18" y="51" class="meta">TITLE + ARTIST</text>
-    <g transform="translate(119 115)" class="px"><rect x="66" y="16" width="9" height="66"/><rect x="77" y="16" width="31" height="9"/><rect x="99" y="25" width="9" height="46"/><rect x="44" y="71" width="31" height="9"/><rect x="33" y="80" width="42" height="20"/><rect x="77" y="60" width="31" height="9"/><rect x="77" y="69" width="31" height="20"/></g>
+  <!-- ShooterRenderer initial formation: invaders 160; shot/ship 255. -->
+  <g transform="translate(795 100)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">SHOOTER</text><text x="18" y="51" class="meta">3 RANKS + TURRET</text>
+    <g transform="translate(108.5 104.5)" clip-path="url(#matrix-clip)"><path class="mid" d="M1 12h8v8H1zM23 12h8v8h-8zM45 12h8v8h-8zM67 12h8v8h-8zM89 12h8v8h-8zM1 34h8v8H1zM23 34h8v8h-8zM45 34h8v8h-8zM67 34h8v8h-8zM89 34h8v8h-8zM1 56h8v8H1zM23 56h8v8h-8zM45 56h8v8h-8zM67 56h8v8h-8zM89 56h8v8h-8z"/><path class="px" d="M67 122h8v8h-8zM56 133h30v8H56z"/></g>
+  </g>
+
+  <!-- ReactionFrames.ready(): centred 3x3 at brightness 100. -->
+  <g transform="translate(45 435)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">REACTION</text><text x="18" y="51" class="meta">READY FRAME · 100</text>
+    <g transform="translate(108.5 104.5)" class="mid" clip-path="url(#matrix-clip)"><path d="M56 56h30v30H56z"/></g>
+  </g>
+
+  <!-- iconFrame(): representative thresholded 1-bit incoming app icon. -->
+  <g transform="translate(420 435)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">NOTIFY GLYPH</text><text x="18" y="51" class="meta">SAMPLE APP ICON · 1-BIT</text>
+    <g transform="translate(108.5 104.5)" class="px" clip-path="url(#matrix-clip)"><path d="M45 12h52v8H45zM34 23h74v8H34zM23 34h96v8H23zM23 45h30v41H23zM89 45h30v41H89zM23 89h96v8H23zM34 100h74v8H34zM45 111h52v8H45z"/></g>
+  </g>
+
+  <!-- DotoText + MarqueeScroller: representative 1-bit text window while PLAY scrolls. -->
+  <g transform="translate(795 435)"><use href="#card-shell" width="360" height="320"/><text x="18" y="30" class="name">NOW PLAYING</text><text x="18" y="51" class="meta">SCROLLING DOTO TEXT · 1-BIT</text>
+    <g transform="translate(108.5 104.5)" class="px" clip-path="url(#matrix-clip)"><path d="M12 34h30v8H12zM67 34h8v63h-8zM12 45h8v30h-8zM45 45h8v30h-8zM12 67h30v8H12zM12 78h8v19h-8zM67 89h52v8H67z"/></g>
   </g>
 </svg>
