@@ -1,0 +1,12 @@
+.DS_Store
+.gradle/
+.idea/
+.claude/
+**/build/
+local.properties
+*.iml
+app/libs/*.aar
+*.apk
+*.aab
+*.jks
+*.keystore

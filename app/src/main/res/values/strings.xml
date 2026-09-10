@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Glyph Snake</string>
+    <string name="tile_label">Snake</string>
+    <string name="toy_name">Snake</string>
+    <string name="garden_tile_label">Garden</string>
+    <string name="notif_tile_label">Notify Glyph</string>
+    <string name="media_tile_label">Now Playing</string>
+    <string name="shooter_tile_label">Shooter</string>
+    <string name="reaction_tile_label">Reaction</string>
+    <string name="essential_key_desc">Lets the Essential Key play the Shooter\'s missile and the Reaction timer. Reads key presses only — no screen content.</string>
+</resources>

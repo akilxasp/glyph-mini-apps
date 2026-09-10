@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24"
+    android:tint="?android:attr/textColorPrimary">
+    <!-- Serpentine body (stroked S) + a head dot. -->
+    <path android:strokeColor="@android:color/white" android:strokeWidth="2.4"
+        android:strokeLineCap="round" android:strokeLineJoin="round" android:fillColor="@android:color/transparent"
+        android:pathData="M4,16 C4,11 9,11 9,15 C9,19 14,19 14,14 C14,10 16,9 18,9" />
+    <path android:fillColor="@android:color/white"
+        android:pathData="M16.3,9 a2.2,2.2 0 1,0 4.4,0 a2.2,2.2 0 1,0 -4.4,0 z" />
+</vector>

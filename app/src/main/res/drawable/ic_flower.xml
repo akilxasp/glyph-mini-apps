@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24"
+    android:tint="?android:attr/textColorPrimary">
+    <!-- 5-petal flower: petals + center, single fill (QS tint recolors it). -->
+    <path android:fillColor="@android:color/white" android:pathData="M8.6,6.8 a3.4,3.4 0 1 0 6.8,0 a3.4,3.4 0 1 0 -6.8,0 z" />
+    <path android:fillColor="@android:color/white" android:pathData="M13.36,10.45 a3.4,3.4 0 1 0 6.8,0 a3.4,3.4 0 1 0 -6.8,0 z" />
+    <path android:fillColor="@android:color/white" android:pathData="M11.54,16.05 a3.4,3.4 0 1 0 6.8,0 a3.4,3.4 0 1 0 -6.8,0 z" />
+    <path android:fillColor="@android:color/white" android:pathData="M5.66,16.05 a3.4,3.4 0 1 0 6.8,0 a3.4,3.4 0 1 0 -6.8,0 z" />
+    <path android:fillColor="@android:color/white" android:pathData="M3.84,10.45 a3.4,3.4 0 1 0 6.8,0 a3.4,3.4 0 1 0 -6.8,0 z" />
+    <!-- center punched darker so the flower reads as a ring of petals -->
+    <path android:fillColor="#000000" android:pathData="M9.9,12 a2.1,2.1 0 1 0 4.2,0 a2.1,2.1 0 1 0 -4.2,0 z" />
+</vector>
