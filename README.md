@@ -2,7 +2,7 @@
 
 A collection of tiny experiences for the 13×13 Glyph Matrix on the Nothing Phone (4a) Pro. Each mode runs from a Quick Settings tile, so there is no traditional launcher screen.
 
-![Glyph Mini Apps showcase](docs/glyph-mini-apps-showcase-bg.png)
+![Glyph Mini Apps showcase](docs/glyph-mini-apps-showcase-solid.png)
 
 ## Mini apps
 
