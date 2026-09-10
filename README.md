@@ -111,8 +111,12 @@ To use Snake as an Always-on Glyph Toy, open **Settings → Glyph Interface → 
 
 Shooter and Reaction use the phone's Essential Key through an accessibility service that reads key presses only; it does not read screen content.
 
+> [!WARNING]
+> Using the Essential Key with Shooter and Reaction requires disabling Nothing's **Essential Space** and **Essential Recorder** system apps. While they are disabled, the Essential Key will no longer open those features and you cannot use either app. Their existing notes and recordings are not deleted, and both apps can be restored later with ADB. This change is optional—the other mini apps work without it.
+
 1. Open **Settings → Accessibility → Glyph Snake** and enable the service.
-2. Start Shooter or Reaction and press the Essential Key. If the phone opens **Essential Space** or **Essential Recorder** instead of controlling the mini app, Nothing's system apps still own the key. You can either leave them enabled and use the other mini apps, or follow [PHONE_CHANGES.md](PHONE_CHANGES.md) to temporarily disable those two system apps with ADB. That document also explains how to restore them; disabling the apps does not delete their existing content.
+2. Follow the **Essential Space** and **Essential Recorder** sections in [PHONE_CHANGES.md](PHONE_CHANGES.md) to disable the two apps with ADB. The same document includes the commands to restore them.
+3. Start Shooter or Reaction and press the Essential Key. It should now control the mini app instead of opening a Nothing system app.
 
 ### Notify Glyph and Now Playing
 
