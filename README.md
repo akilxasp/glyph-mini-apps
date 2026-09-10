@@ -24,7 +24,7 @@ Only one main mode owns the matrix at a time. Starting another mode stops the pr
 - Nothing Phone (4a) Pro with its 13×13 Glyph Matrix
 - Android 14 or newer
 - A system build that supports `setAppMatrixFrame` (tested requirement: build `20250801` or newer)
-- Android Studio with JDK 17
+- Android Studio with its bundled JetBrains JDK 21
 - Android SDK 35
 - Nothing Glyph Matrix SDK 2.0
 - ADB for the one-time device setup
@@ -32,25 +32,19 @@ Only one main mode owns the matrix at a time. Starting another mode stops the pr
 ## Build and install
 
 1. Download `glyph-matrix-sdk-2.0.aar` from the [Nothing Glyph Matrix Developer Kit](https://github.com/Nothing-Developer-Programme/GlyphMatrix-Developer-Kit) and place it in `app/libs/`.
-2. Open the project in Android Studio, or build from the terminal:
+2. Connect the phone over ADB and run:
 
    ```bash
-   ./gradlew installDebug
+   ./setup.sh
    ```
 
-3. Connect the phone over ADB and enable Glyph Matrix debug access:
+The script validates the SDK and device connection, builds and installs the app, and enables Glyph Matrix debug access. To also grant the app permission to refresh the expiring debug flag automatically, review the source and run:
 
-   ```bash
-   adb shell settings put global nt_glyph_interface_debug_enable 1
-   ```
+```bash
+./setup.sh --auto-refresh
+```
 
-4. Optional: allow the app to refresh that debug flag automatically. This is a privileged permission and should only be granted if you have reviewed the source:
-
-   ```bash
-   adb shell pm grant com.akil.glyphlife android.permission.WRITE_SECURE_SETTINGS
-   ```
-
-The debug flag can expire after roughly 48 hours or a reboot. Without the optional permission, run step 3 again when the matrix stops responding.
+The debug flag can expire after roughly 48 hours or a reboot. Without the optional permission, run the setup script again when the matrix stops responding.
 
 ## Add the controls
 
