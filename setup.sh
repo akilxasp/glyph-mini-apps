@@ -17,9 +17,10 @@ case "${1:-}" in
 esac
 
 if [[ ! -f app/libs/glyph-matrix-sdk-2.0.aar ]]; then
-  echo "Missing app/libs/glyph-matrix-sdk-2.0.aar" >&2
-  echo "Download it from https://github.com/Nothing-Developer-Programme/GlyphMatrix-Developer-Kit" >&2
-  exit 1
+  command -v curl >/dev/null || { echo "curl is required to download the Nothing Glyph Matrix SDK." >&2; exit 1; }
+  echo "Downloading the Nothing Glyph Matrix SDK..."
+  curl --fail --location --output app/libs/glyph-matrix-sdk-2.0.aar \
+    https://raw.githubusercontent.com/Nothing-Developer-Programme/GlyphMatrix-Developer-Kit/main/glyph-matrix-sdk-2.0.aar
 fi
 
 # Gradle is pinned to JetBrains JDK 21; reuse Android Studio's bundled runtime when present.

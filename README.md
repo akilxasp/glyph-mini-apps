@@ -19,32 +19,67 @@ Snake is also available as an Always-on Glyph Toy. The Quick Settings tile and G
 
 Only one main mode owns the matrix at a time. Starting another mode stops the previous one; notification icons temporarily borrow the display and then return it.
 
-## Requirements
+## Before you begin
 
 - Nothing Phone (4a) Pro with its 13×13 Glyph Matrix
 - Android 14 or newer
 - A system build that supports `setAppMatrixFrame` (tested requirement: build `20250801` or newer)
-- Android Studio with its bundled JetBrains JDK 21
-- Android SDK 35
-- Nothing Glyph Matrix SDK 2.0
-- ADB for the one-time device setup
+- [Android Studio](https://developer.android.com/studio) with Android SDK 35 installed
+- A USB cable
+- USB debugging enabled on the phone
 
 ## Build and install
 
-1. Download `glyph-matrix-sdk-2.0.aar` from the [Nothing Glyph Matrix Developer Kit](https://github.com/Nothing-Developer-Programme/GlyphMatrix-Developer-Kit) and place it in `app/libs/`.
-2. Connect the phone over ADB and run:
+### 1. Get this project
 
-   ```bash
-   ./setup.sh
-   ```
+The recommended option is to clone it with Git:
 
-The script validates the SDK and device connection, builds and installs the app, and enables Glyph Matrix debug access. To also grant the app permission to refresh the expiring debug flag automatically, review the source and run:
+```bash
+git clone https://github.com/akilxasp/glyph-mini-apps.git
+cd glyph-mini-apps
+```
+
+If you do not use Git, click **Code → Download ZIP** at the top of this GitHub page, extract the ZIP, and open Terminal in the extracted `glyph-mini-apps-main` folder.
+
+### 2. Prepare the phone
+
+1. Enable **Developer options** on the phone.
+2. In Developer options, enable **USB debugging**.
+3. Connect the phone to the computer with USB.
+4. Accept the **Allow USB debugging?** message on the phone.
+
+### 3. Run the installer
+
+From inside the project folder, run:
+
+```bash
+./setup.sh
+```
+
+If you downloaded the ZIP and macOS says the script is not executable, run this once and try again:
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+The script:
+
+1. Downloads `glyph-matrix-sdk-2.0.aar` from the official [Nothing Glyph Matrix Developer Kit](https://github.com/Nothing-Developer-Programme/GlyphMatrix-Developer-Kit) if it is missing.
+2. Uses Android Studio's bundled JetBrains JDK 21.
+3. Checks that ADB can see the connected phone.
+4. Builds and installs the debug app.
+5. Enables Glyph Matrix debug access on the phone.
+
+### Optional: keep Glyph debug access enabled
+
+The Glyph debug flag can expire after roughly 48 hours or a reboot. You can rerun `./setup.sh` when that happens.
+
+Alternatively, after reviewing the source, allow the app to refresh the flag automatically:
 
 ```bash
 ./setup.sh --auto-refresh
 ```
-
-The debug flag can expire after roughly 48 hours or a reboot. Without the optional permission, run the setup script again when the matrix stops responding.
 
 ## Add the controls
 
