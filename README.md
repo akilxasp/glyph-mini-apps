@@ -23,7 +23,7 @@ Only one main mode owns the matrix at a time. Starting another mode stops the pr
 
 - Nothing Phone (4a) Pro with its 13×13 Glyph Matrix
 - Android 14 or newer
-- A system build that supports `setAppMatrixFrame` (tested requirement: build `20250801` or newer)
+- The latest available Nothing OS update. Check **Settings → System → System update → Check for updates** before installing; older builds may not let Quick Settings tiles control the matrix.
 - [Android Studio](https://developer.android.com/studio) with Android SDK 35 installed
 - A USB cable
 - USB debugging enabled on the phone
@@ -39,7 +39,7 @@ git clone https://github.com/akilxasp/glyph-mini-apps.git
 cd glyph-mini-apps
 ```
 
-If you do not use Git, click **Code → Download ZIP** at the top of this GitHub page, extract the ZIP, and open Terminal in the extracted `glyph-mini-apps-main` folder.
+If you do not use Git, click **Code → Download ZIP** at the top of this GitHub page and extract the ZIP. The project folder will be named `glyph-mini-apps-main`.
 
 ### 2. Prepare the phone
 
@@ -50,7 +50,9 @@ If you do not use Git, click **Code → Download ZIP** at the top of this GitHub
 
 ### 3. Run the installer
 
-From inside the project folder, run:
+#### macOS or Linux
+
+Open Terminal in the project folder and run:
 
 ```bash
 ./setup.sh
@@ -63,6 +65,14 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
+#### Windows
+
+Open the extracted project folder in File Explorer. Right-click an empty area, choose **Open in Terminal**, and run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+```
+
 The script:
 
 1. Downloads `glyph-matrix-sdk-2.0.aar` from the official [Nothing Glyph Matrix Developer Kit](https://github.com/Nothing-Developer-Programme/GlyphMatrix-Developer-Kit) if it is missing.
@@ -73,12 +83,18 @@ The script:
 
 ### Optional: keep Glyph debug access enabled
 
-The Glyph debug flag can expire after roughly 48 hours or a reboot. You can rerun `./setup.sh` when that happens.
+The Glyph debug flag can expire after roughly 48 hours or a reboot. You can rerun the installer when that happens.
 
 Alternatively, after reviewing the source, allow the app to refresh the flag automatically:
 
 ```bash
 ./setup.sh --auto-refresh
+```
+
+On Windows, use:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\setup.ps1 -AutoRefresh
 ```
 
 ## Add the controls
@@ -96,7 +112,7 @@ To use Snake as an Always-on Glyph Toy, open **Settings → Glyph Interface → 
 Shooter and Reaction use the phone's Essential Key through an accessibility service that reads key presses only; it does not read screen content.
 
 1. Open **Settings → Accessibility → Glyph Snake** and enable the service.
-2. If Essential Space or Essential Recorder still intercepts the key, see [PHONE_CHANGES.md](PHONE_CHANGES.md) for the reversible ADB commands and their trade-offs.
+2. Start Shooter or Reaction and press the Essential Key. If the phone opens **Essential Space** or **Essential Recorder** instead of controlling the mini app, Nothing's system apps still own the key. You can either leave them enabled and use the other mini apps, or follow [PHONE_CHANGES.md](PHONE_CHANGES.md) to temporarily disable those two system apps with ADB. That document also explains how to restore them; disabling the apps does not delete their existing content.
 
 ### Notify Glyph and Now Playing
 
@@ -107,13 +123,5 @@ Open **Settings → Notifications → Device & app notifications → Glyph Snake
 - `app/src/main/java/com/akil/glyphlife/` — game engines, renderers, Android services, tiles, and settings screens
 - `app/src/test/java/com/akil/glyphlife/` — small engine and renderer checks
 - `PHONE_CHANGES.md` — device changes, reasons, and reversal commands
-
-## Development
-
-Run the project checks with:
-
-```bash
-./gradlew testDebugUnitTest
-```
 
 This is an independent project and is not affiliated with or endorsed by Nothing Technology Limited.
