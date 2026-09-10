@@ -23,7 +23,7 @@ Only one main mode owns the matrix at a time. Starting another mode stops the pr
 
 - Nothing Phone (4a) Pro with its 13×13 Glyph Matrix
 - Android 14 or newer
-- The latest available Nothing OS update. Check **Settings → System → System update → Check for updates** before installing; older builds may not let Quick Settings tiles control the matrix.
+- Nothing OS system version **August 1, 2025 (`20250801`) or later**. This is the minimum version specified by Nothing for app-based Glyph Matrix control. The simplest way to meet it is to open **Settings → System → System update → Check for updates** and install every available update.
 - [Android Studio](https://developer.android.com/studio) with Android SDK 35 installed
 - A USB cable
 - USB debugging enabled on the phone
